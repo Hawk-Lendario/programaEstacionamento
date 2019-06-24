@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load bootstrap %}
+{% block main %}
+
+<div class="row">
+    <div class="col">
+        <h2>Updating Veiculo: {{ veiculo }}</h2>
+
+        <form action="{% url 'core_veiculo_update' veiculo.id %}" method="post">
+            {% csrf_token %}
+
+            {{ form|bootstrap_horizontal:'col-lg-7' }}
+
+
+            <button type="submit" class="btn btn-success">Salvar</button>
+
+        </form>
+
+        <form action="{% url 'core_veiculo_delete' veiculo.id %}">
+            <button type="submit" class="btn btn-danger">Deletar</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
+
+

@@ -1,0 +1,75 @@
+{% extends 'website/base.html' %}
+{% block main %}
+    <div class="row">
+        <p>{{ mensagem }}</p>
+    </div>
+
+    <div class="row row-space">
+        <div class="col-6">
+            <form method="POST">
+                {% csrf_token %}
+                <div class="form-group">
+                        <label for="inputEmail14">Email</label>
+                        <input type="email" class="form-control" id="inputEmail4" placeholder="Email" name="email"
+                        autocomplete="email">
+                    </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputNome">Nome</label>
+                        <input type="text" class="form-control" autocomplete="name" id="inputNome" placeholder="Coloque seu primeiro nome aqui" name="nome">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="inputSobrenome">Sobrenome</label>
+                        <input type="text" class="form-control" id="inputSobrenome" autocomplete="additional-name" placeholder="Seu sobrenome aqui" name="sobrenome">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="inputEndereco">Endereço</label>
+                    <input type="text" class="form-control" id="inputEndereco" placeholder="Apartment, studio, or floor" name="endereco">
+                </div>
+                
+                <div class="form-group">
+                    <textarea id="" class="form-control" cols="65" rows="10" name="mensagem"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="gridCheck" name="receber-noticias">
+                        <label class="form-check-label" for="gridCheck">
+                            Receber noticias e emails
+                        </label>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+        </div>
+
+        <div class="col-6">
+            <p>
+                Mussum Ipsum, cacilds vidis litro abertis. 
+                Quem num gosta di mé, boa gentis num é. 
+                Admodum accumsan disputationi eu sit. 
+                Vide electram sadipscing et per. 
+                Leite de capivaris, leite de mula manquis sem cabeça. 
+                A ordem dos tratores não altera o pão duris.
+            </p>
+
+            <p>
+                Atirei o pau no gatis, per gatis num morreus.
+                Viva Forevis aptent taciti sociosqu ad litora torquent. 
+                Pra lá , depois divoltis porris, paradis. 
+                Cevadis im ampola pa arma uma pindureta.
+            </p>
+
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d467692.0488551513!2d-
+                46.87549667433137!3d-23.681531452945958!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!
+                1s0x94ce448183a461d1%3A0x9ba94b08ff335bae!2sS%C3%A3o+Paulo%2C+SP%2C+Brasil!5e0!3m2!1spt-
+                BR!2sie!4v1535321167233" width="500" height="400" frameborder="0" style="border:0" allowfullscreen>
+            </iframe>
+
+        </div>
+    </div>
+{% endblock %}
+

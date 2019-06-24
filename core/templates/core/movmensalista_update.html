@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load bootstrap %}
+
+{% block main %}
+
+<div class="row">
+    <div class="col">
+        <h2>Atualizando Mov-Mensalista: {{ movmensalista }}</h2>
+
+        <form action="{% url 'core_movmensalista_update' movmensalista.id %}" method="post">
+            {% csrf_token %}
+
+            {{ form|bootstrap_horizontal:'col-lg-6' }}
+
+
+            <button type="submit" class="btn btn-success">Salvar</button>
+
+        </form>
+
+        <form action="{% url 'core_movmensalista_delete' movmensalista.id %}">
+            <button type="submit" class="btn btn-danger">Deletar</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

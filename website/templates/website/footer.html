@@ -1,0 +1,36 @@
+<div class="row row-space">
+    <div class="col-1">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link  {% if request.path == '/' %}
+              disabled
+              {% endif %}" href="{% url 'website_home' %}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link {% if request.path == '/servicos' %}
+              disabled
+              {% endif %}" href="{% url 'website_servicos' %}">Serviços</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link {% if request.path == '/sobre' %}
+              disabled
+              {% endif %}" href="{% url 'website_sobre' %}">Sobre</a>
+          </li>
+            <li class="nav-item">
+            <a class="nav-link {% if request.path == '/planos' %}
+              disabled
+              {% endif %}" href="{% url 'website_planos' %}">Planos</a>
+          </li>
+            <li class="nav-item">
+            <a class="nav-link {% if request.path == '/contato' %}
+              disabled
+              {% endif %}" href="{% url 'website_contato' %}">Contato</a>
+          </li>
+        </ul>
+    </div>
+    <div class="col-3"></div>
+    <div class="col-8">
+        <p class="footer-website">Copyright - Todos os direitos reservados | Desenvolvido por Fulano de Tal</p>
+    </div>
+</div>
+

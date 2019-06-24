@@ -1,0 +1,33 @@
+{% load static %}
+<div class="row">
+    <div class="col-12">
+        <ul class="nav nav-pills justify-content-end">
+            <li class="nav-item">
+              <a class="nav-link {% if request.path == '/' %} nav-link active 
+                {% endif%}" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link {% if request.path == '/servicos' %} 
+              active 
+              {% endif %}" href="{% url 'website_servicos' %}">Serviços</a>
+            </li>
+            <li class="nav-item' %}">
+                <a class="nav-link {% if request.path == '/sobre' %} active {% endif%}" 
+                href="{% url 'website_sobre' %}">Sobre</a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link {% if request.path == '/planos' %} active {% endif%}" 
+              href="{% url 'website_planos' %}">Plano</a>
+            </li>
+              <a class="nav-link {% if request.path == '/contato' %} active {% endif%}" 
+              href="{% url 'website_contato' %}">Contato</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link btn-outline-primary" href="{% url 'core_home' %}"" >Sistema</a>
+            </li>
+            
+          </ul>
+    </div>
+</div>
+
